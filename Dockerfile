@@ -2,8 +2,6 @@ FROM java:8-jre
 
 MAINTAINER Daniel Sturm <mail@danielsturm.de>
 
-#COPY build.properties /project/
-
 RUN set -x \
  && apt-get update \
  && apt-get install -y \
