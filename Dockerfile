@@ -18,5 +18,4 @@ ENV HOME "/cache"
 VOLUME ["/cache", "/sbt"]
 WORKDIR /sbt
 
-CMD ["-Dsbt.global.base=/cache/.sbt/", "-Dsbt.ivy.home=/cache/.ivy2/", "-Divy.home=/cache/.ivy2/"]
-ENTRYPOINT ["sbt"]
+ENTRYPOINT ["sbt", "-sbt-dir", "/cache/.sbt/", "-sbt-boot", "/cache/.sbt/boot", "-ivy", "/cache/.ivy2/"]

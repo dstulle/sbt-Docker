@@ -18,3 +18,8 @@ If the container is run with the parameter `-u` the current user id and group id
     docker run --rm -it -v $PWD:/sbt -v $HOME:/cache -u $(id -u):$(id -g) sbt
 ```
 
+If you want to handle sbt like the locally installed version you could just define an alias in your `~/.profile` or wherever you like:
+
+```
+    alias sbt="docker run --rm -it -v $PWD:/sbt -v $HOME:/cache -u \$(id -u):\$(id -g) sbt"
+```
